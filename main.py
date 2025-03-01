@@ -23,4 +23,4 @@ if __name__ == "__main__":
     #   - debug=True enables debugging features (auto-reload on code changes, detailed error messages)
     #   - host='0.0.0.0' makes the app accessible from any IP address on your network (not just localhost)
     #   - port=5000 specifies the port number (default is 5000)
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=6969)
