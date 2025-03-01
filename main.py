@@ -12,13 +12,6 @@ def home():
     """
     return render_template("home.html")
 
-@app.route("/account")
-def account():
-    """
-    This is the account page.
-    """
-    return render_template("account.html")
-
 
 
 # Run the application if this script is executed directly
