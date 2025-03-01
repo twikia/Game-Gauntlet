@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-import src.scripts.scraping as scrape_script
 
 # Create a Flask application instance
 app = Flask(__name__)
