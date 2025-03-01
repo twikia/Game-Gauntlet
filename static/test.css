@@ -1,0 +1,17 @@
+/* static/style.css */
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1 {
+    color: navy;
+}
+
+.my-container {
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: white;
+}

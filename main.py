@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 # Create a Flask application instance
 app = Flask(__name__)
@@ -11,6 +11,11 @@ def hello_world():
     It returns the string "Hello, World!".
     """
     return "Hello, World!"
+
+@app.route("/my_page")
+def my_page():
+    return render_template("test.html")
+
 
 # Run the application if this script is executed directly
 if __name__ == "__main__":
