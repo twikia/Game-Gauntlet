@@ -11,10 +11,6 @@ def home():
     """
     return render_template("home.html")
 
-@app.route("/my_page")
-def my_page():
-    return render_template("test.html")
-
 
 
 # Run the application if this script is executed directly
