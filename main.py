@@ -74,10 +74,10 @@ def between():
     if (len(refs) > 0):  # Check if there are games left
         next_game = refs[index]
         refs.pop(index)  # Remove first game
-        index = random.randint(0, len(refs))
+        index = random.randint(0, len(refs) - 1)
         return render_template(next_game)
     else:
-        return render_template("endpage.html")
+        return render_template("end.html")
 
 
 @app.route("/end")
