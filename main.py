@@ -19,6 +19,10 @@ def kango_jump():
 def pop_lock():
     return render_template("pop_lock.html")
 
+@app.route("/b")
+def bottle_flip():
+    return render_template("bottle_flip.html")
+
 @app.route("/after_game")
 def back_home():
     return render_template("home.html")
