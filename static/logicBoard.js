@@ -36,10 +36,11 @@ function clicked(cel) {
 }
 
 function checkAnswers() {
-
     const correctAnswers = ["CEO", "Intern", "Developer", "Project Manager", "App", "Email", "Debug", "Webpage"]; 
     let resultsDiv = document.getElementById("results");
     resultsDiv.innerHTML = ""; 
+
+    let correct = true;
 
     for (let i = 1; i <= 8; i++) {
         let userAnswer = document.getElementById("q" + i).value.trim().toLowerCase();
@@ -52,7 +53,14 @@ function checkAnswers() {
         } else {
             resultText.innerHTML = `Question ${i}: Wrong, Loser`;
             resultText.classList.add("incorrect");
+            correct = false;
         }
         resultsDiv.appendChild(resultText);
+    }
+    if (correct == true){
+        showMessage("GOOD JOB!");
+            setTimeout(() => {
+                window.location.href = "/"; 
+        }, 2000);
     }
 }

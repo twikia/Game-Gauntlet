@@ -11,6 +11,10 @@ def home():
     """
     return render_template("home.html")
 
+@app.route("/wheres-waldo")
+def wheres_waldo():
+    return render_template("waldo.html")
+
 @app.route("/j")
 def kango_jump():
     return render_template("jump_atem.html")
@@ -18,6 +22,10 @@ def kango_jump():
 @app.route("/p")
 def pop_lock():
     return render_template("pop_lock.html")
+
+@app.route("/b")
+def bottle_flip():
+    return render_template("bottle_flip.html")
 
 @app.route("/after_game")
 def back_home():
