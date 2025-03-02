@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
               spread: 70,
               origin: { y: 0.6 }
             });
+            window.location.href = "after_game";
           } else {
             text_return = "Try again loser.";
           }
