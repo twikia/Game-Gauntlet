@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ) {
             showMessage("GOOD JOB!");
             setTimeout(() => {
-                window.location.href = "/"; 
+                window.location.href = "/after_game"; 
             }, 2000);
         } else {
             showMessage("WRONG LOSER");
