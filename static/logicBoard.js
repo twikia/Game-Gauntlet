@@ -60,7 +60,7 @@ function checkAnswers() {
     if (correct === true){
         alert("You found the correct answers!");
         setTimeout(() => {
-            window.location.href = "/"; // Redirect - ADD ROUTE TO NEXT GAME
+            window.location.href = "/after_game"; // Redirect - ADD ROUTE TO NEXT GAME
         }, 2000);
         return;
     }
