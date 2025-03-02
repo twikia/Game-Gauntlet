@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-import src.scripts.scraping as scrape_script
 
 # Create a Flask application instance
 app = Flask(__name__)
@@ -12,7 +11,13 @@ def home():
     """
     return render_template("home.html")
 
+@app.route("/wheres-waldo")
+def wheres_waldo():
+    return render_template("waldo.html")
 
+@app.route("/chase")
+def chase():
+    return render_template("chase.html")
 
 # Run the application if this script is executed directly
 if __name__ == "__main__":
