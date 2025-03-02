@@ -36,7 +36,7 @@ function clicked(cel) {
 }
 
 function checkAnswers() {
-    const correctAnswers = ["CEO", "Intern", "Developer", "Project Manager", "App", "Email", "Debug", "Webpage"]; 
+    const correctAnswers = ["CEO", "Intern", "Developer", "Project Manager", "App", "Webpage", "Debug", "Email"]; 
     let resultsDiv = document.getElementById("results");
     resultsDiv.innerHTML = ""; 
 
@@ -57,10 +57,11 @@ function checkAnswers() {
         }
         resultsDiv.appendChild(resultText);
     }
-    if (correct == true){
-        showMessage("GOOD JOB!");
-            setTimeout(() => {
-                window.location.href = "/"; 
+    if (correct === true){
+        alert("You found the correct answers!");
+        setTimeout(() => {
+            window.location.href = "/"; // Redirect - ADD ROUTE TO NEXT GAME
         }, 2000);
+        return;
     }
 }
