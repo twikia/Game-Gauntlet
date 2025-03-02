@@ -1,0 +1,22 @@
+    body { padding-top: 100px; text-align: center; background: rgb(255, 222, 252); color: black; font-family: Arial, sans-serif; }
+    .grid { 
+        display: grid; 
+        grid-template-columns: repeat(10, 40px); 
+        grid-template-rows: repeat(10, 40px);
+        gap: 2px;
+        margin: 20px auto;
+        width: 420px;
+    }
+    .cell { width: 40px; height: 40px; background: white; }
+    .path { background: rgb(255, 250, 184); } 
+    
+    .finish {
+        background: repeating-linear-gradient(
+            45deg,
+            #ffffff 0px,
+            #ffffff 10px,
+            #000000 10px,
+            #000000 20px
+        );
+        border: 2px solid white;
+    }

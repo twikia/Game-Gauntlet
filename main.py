@@ -31,6 +31,9 @@ def logicBoard():
     return render_template("logicBoard.html")
 
 
+@app.route("/chase")
+def chase():
+    return render_template("chase.html")
 
 # Run the application if this script is executed directly
 if __name__ == "__main__":

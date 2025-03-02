@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #ff0000;
+}
+
+#game-container {
+    display: inline-block;
+    position: relative;
+}
+
+img {
+    max-width: 90%;
+    height: auto;
+    cursor: crosshair;
+}
+#message-box {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(128, 185, 255, 0.8);
+    color: white;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    display: none; 
+    z-index: 1000;
+}
