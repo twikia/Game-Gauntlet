@@ -13,7 +13,9 @@ def home():
     """
     This is the home page.
     """
-
+    global index, refs
+    refs = ["jump_atem.html","pop_lock.html","bottle_flip.html","logicBoard.html","mathgameL1.html","waldo.html","chase.html","cs.html"]
+    index = random.randint(0, len(refs)-1)
     first_game = refs[index]
     return render_template("home.html")
 
