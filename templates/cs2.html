@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CS Game</title>
+  <link rel="stylesheet" href="/static/cs1.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Level 2!<h1>
+    <h1>Fill in the ____!<h1>
+    
+    <!-- Large box for target number -->
+    <div id="targetBox">
+        <img src="/static/imgs/truthtable.png" alt="Truth Table">
+      </div>
+    <button id="nextLevel">Next Level</button>
+    <h2>Fill in the missing condition (____)<h2>
+    <!-- Display of the equation being formed -->
+    <div id="answerDisplay"></div>
+    
+    <div id="buttons">
+      <div class="number-buttons">
+        <button class="num">P ⋀ Q </button>
+        <button class="num">¬ P ⋀ Q </button>
+        <button class="num">P ⋁ Q</button>
+        <button class="num">P ⋁ ¬Q</button>
+      </div>
+    </div>
+    <h2> </h2>
+    <div class="control-buttons">
+        <button id="submit">Submit</button>
+        <button id="clear">Clear</button>
+    </div>
+    
+  </div>
+
+  
+
+  <script src="/static/cs2.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+</body>
+</html>

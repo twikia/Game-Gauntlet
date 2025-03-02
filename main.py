@@ -86,6 +86,21 @@ def end():
 
 
 
+@app.route("/csgame")
+def csgame():
+    return render_template("cs.html")
+
+@app.route("/cs2")
+def cs2():
+    return render_template("cs2.html")
+
+@app.route("/cs3")
+def cs3():
+    return render_template("cs3.html")
+
+@app.route("/colorblocksudoku")
+def colorblocksudoku():
+    return render_template("colorblocksudoku.html")
 # Run the application if this script is executed directly
 if __name__ == "__main__":
     # Start the Flask development server
