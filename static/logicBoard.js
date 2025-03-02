@@ -3,8 +3,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     buttons.forEach(function(button) {
         button.addEventListener("click", function() {
-            const cel = button.closest(".cell"); // Find the parent cell of the button
-            clicked(cel); // Call clicked with the cell as an argument
+            const buttonName = button.getAttribute("name") || button.id || "Unnamed Button"; // Get name or ID
+            console.log("Button clicked:", buttonName); // Log the button name
+
+            if (buttonName === "XO")
+            {
+                const cel = button.closest(".cell"); // Find the parent cell of the button
+                clicked(cel); // Call clicked with the cell as an argument
+            }
+            else if (buttonName === "submit"){
+                checkAnswers();
+            }
         });
     });
 });
@@ -23,5 +32,27 @@ function clicked(cel) {
     } else {
         // Change to white if current color is neither red nor green
         cel.style.backgroundColor = "rgb(255, 255, 255)";
+    }
+}
+
+function checkAnswers() {
+
+    const correctAnswers = ["CEO", "Intern", "Developer", "Project Manager", "App", "Email", "Debug", "Webpage"]; 
+    let resultsDiv = document.getElementById("results");
+    resultsDiv.innerHTML = ""; 
+
+    for (let i = 1; i <= 8; i++) {
+        let userAnswer = document.getElementById("q" + i).value.trim().toLowerCase();
+        let correctAnswer = correctAnswers[i - 1].toLowerCase();
+
+        let resultText = document.createElement("p");
+        if (userAnswer === correctAnswer) {
+            resultText.innerHTML = `Question ${i}: Correct`;
+            resultText.classList.add("correct");
+        } else {
+            resultText.innerHTML = `Question ${i}: Wrong, Loser`;
+            resultText.classList.add("incorrect");
+        }
+        resultsDiv.appendChild(resultText);
     }
 }
