@@ -80,6 +80,12 @@ def between():
         return render_template("endpage.html")
 
 
+@app.route("/end")
+def end():
+    return render_template("end.html")
+
+
+
 # Run the application if this script is executed directly
 if __name__ == "__main__":
     # Start the Flask development server
