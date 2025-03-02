@@ -11,8 +11,40 @@ def home():
     """
     return render_template("home.html")
 
+@app.route("/gamesab")
+def gamesab():
+    """
+    Game Sab
+    """
+    return render_template("gamesab.html")
 
+@app.route("/gamesab2")
+def gamesab2():
+    """
+    Game Sab2
+    """
+    return render_template("gamesab2.html")
 
+@app.route("/level1")
+def level1():
+    """
+    Math Game Level 1
+    """
+    return render_template("mathgameL1.html")
+
+@app.route("/level2")
+def level2():
+    """
+    Math Game Level 2
+    """
+    return render_template("mathgameL2.html")
+
+@app.route("/level3")
+def level3():
+    """
+    Math Game Level 3
+    """
+    return render_template("mathgameL3.html")
 # Run the application if this script is executed directly
 if __name__ == "__main__":
     # Start the Flask development server
