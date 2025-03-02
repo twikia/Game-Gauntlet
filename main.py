@@ -62,6 +62,11 @@ def waldo():
 def chase():
     return render_template("chase.html")
 
+@app.route("/between")
+def between():
+    return render_template("between.html")
+
+
 # Run the application if this script is executed directly
 if __name__ == "__main__":
     # Start the Flask development server
