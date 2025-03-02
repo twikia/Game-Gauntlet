@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
           // Reveal the next level button
           document.getElementById('nextLevel').style.display = 'inline-block';
         } else {
-        //   implement
+          alert("Incorrect, try again!");
         }
 
       } catch (error) {

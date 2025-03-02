@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const clearButton = document.getElementById("clear");
     
     // Set a fixed target for this level (for testing, target = 16)
-    const targetAnswer = "ABFCEDG";
+    const targetAnswer = "ABCFEGD";
     
     let answer = "";
   
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Equals button event listener
     submitButton.addEventListener("click", function() {
       try {
-        if (answer == targetNumber) {
+        if (answer == targetAnswer) {
           // Trigger confetti 
           confetti({
             particleCount: 100,
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
           // Reveal the next level button
           document.getElementById('nextLevel').style.display = 'inline-block';
         } else {
-        //   implement
+          alert("Incorrect, try again!");
         }
 
       } catch (error) {
@@ -51,5 +51,5 @@ document.addEventListener("DOMContentLoaded", function() {
 const nextLevelButton = document.getElementById("nextLevel");
 nextLevelButton.addEventListener("click", function() {
     // Redirect level2 page
-    window.location.href = "between";
+    window.location.href = "after_game";
 });
