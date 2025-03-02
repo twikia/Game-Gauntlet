@@ -36,7 +36,7 @@ function clicked(cel) {
 }
 
 function checkAnswers() {
-    const correctAnswers = ["CEO", "Intern", "Developer", "Project Manager", "App", "Email", "Debug", "Webpage"]; 
+    const correctAnswers = ["CEO", "Intern", "Developer", "Project Manager", "App", "Webpage", "Debug", "Email"]; 
     let resultsDiv = document.getElementById("results");
     resultsDiv.innerHTML = ""; 
 
