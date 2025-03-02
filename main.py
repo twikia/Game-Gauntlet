@@ -11,6 +11,25 @@ def home():
     """
     return render_template("home.html")
 
+@app.route("/j")
+def kango_jump():
+    return render_template("jump_atem.html")
+
+@app.route("/p")
+def pop_lock():
+    return render_template("pop_lock.html")
+
+@app.route("/after_game")
+def back_home():
+    return render_template("home.html")
+
+@app.route("/logicBoard")
+def logicBoard():
+    """
+    This is the logic board.
+    """
+    return render_template("logicBoard.html")
+
 @app.route("/gamesab")
 def gamesab():
     """
