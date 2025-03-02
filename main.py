@@ -50,6 +50,10 @@ def level3():
     """
     return render_template("mathgameL3.html")
 
+@app.route("/waldo")
+def chase():
+    return render_template("waldo.html")
+
 @app.route("/chase")
 def chase():
     return render_template("chase.html")
