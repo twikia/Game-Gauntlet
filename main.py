@@ -43,6 +43,12 @@ def level2():
     Math Game Level 2
     """
     return render_template("mathgameL2.html")
+@app.route("/level3")
+def level3():
+    """
+    Math Game Level 3
+    """
+    return render_template("mathgameL3.html")
 
 @app.route("/chase")
 def chase():
