@@ -14,6 +14,7 @@
     }
 </style>
 <style>
+
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr; /* Two equal columns */
@@ -28,6 +29,7 @@
         max-width: 700px; /* Max width to prevent overflow */
         left: 10%;
         aspect-ratio: 1 / 1;
+        margin-bottom: 7rem;
     }
     
     .top-left {
@@ -96,6 +98,11 @@
     opacity: 0;
     width: 100%;
     height: 100%;
+}
+
+#answers {
+    width: 10%;
+    height: 10%;
 }
 
 
@@ -170,6 +177,31 @@
             </div>
         </div>
     </div>
-    
+    <div>
+        <center>
+            <h2>
+                <b>Input your answers here:</b>
+            </h2>
+        </center>
+    </div>
+    <center>
+            <form id="answerForm">
+                <h3>Roles</h3>
+                    <div class="question">Alice <input type="text" id="q1"></div>
+                    <div class="question">Bob <input type="text" id="q2"></div>
+                    <div class="question">Charlie <input type="text" id="q3"></div>
+                    <div class="question">Dave <input type="text" id="q4"></div>
+                <h3>Projects</h3>
+                    <div class="question">Alice <input type="text" id="q5"></div>
+                    <div class="question">Bob <input type="text" id="q6"></div>
+                    <div class="question">Charlie <input type="text" id="q7"></div>
+                    <div class="question">Dave <input type="text" id="q8"></div>
+            <center>
+                <button type="button" id="submit" >Check Answers</button>
+            </center>
+            <div id="results"></div>
+        </form>
+        </div>
+    </center>
 </body>
 </html>
