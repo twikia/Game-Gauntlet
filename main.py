@@ -11,10 +11,6 @@ def home():
     """
     return render_template("home.html")
 
-@app.route("/wheres-waldo")
-def wheres_waldo():
-    return render_template("waldo.html")
-
 @app.route("/j")
 def kango_jump():
     return render_template("jump_atem.html")
@@ -59,7 +55,7 @@ def level3():
     return render_template("mathgameL3.html")
 
 @app.route("/waldo")
-def chase():
+def waldo():
     return render_template("waldo.html")
 
 @app.route("/chase")
