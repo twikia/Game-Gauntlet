@@ -57,10 +57,11 @@ function checkAnswers() {
         }
         resultsDiv.appendChild(resultText);
     }
-    if (correct == true){
-        showMessage("GOOD JOB!");
-            setTimeout(() => {
-                window.location.href = "/"; 
+    if (correct === true){
+        alert("You found the correct answers!");
+        setTimeout(() => {
+            window.location.href = "/"; // Redirect - ADD ROUTE TO NEXT GAME
         }, 2000);
+        return;
     }
 }
