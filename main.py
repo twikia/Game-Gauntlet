@@ -15,6 +15,49 @@ def home():
 def wheres_waldo():
     return render_template("waldo.html")
 
+@app.route("/j")
+def kango_jump():
+    return render_template("jump_atem.html")
+
+@app.route("/p")
+def pop_lock():
+    return render_template("pop_lock.html")
+
+@app.route("/b")
+def bottle_flip():
+    return render_template("bottle_flip.html")
+
+@app.route("/after_game")
+def back_home():
+    return render_template("home.html")
+
+@app.route("/logicBoard")
+def logicBoard():
+    """
+    This is the logic board.
+    """
+    return render_template("logicBoard.html")
+
+@app.route("/level1")
+def level1():
+    """
+    Math Game Level 1
+    """
+    return render_template("mathgameL1.html")
+
+@app.route("/level2")
+def level2():
+    """
+    Math Game Level 2
+    """
+    return render_template("mathgameL2.html")
+@app.route("/level3")
+def level3():
+    """
+    Math Game Level 3
+    """
+    return render_template("mathgameL3.html")
+
 @app.route("/chase")
 def chase():
     return render_template("chase.html")
