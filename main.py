@@ -63,7 +63,10 @@ def level3():
     """
     Math Game Level 3
     """
-    return render_template("mathgameL3.html")
+    return render_template("mathgameL3.html")@app.route("/chase")
+def chase():
+    return render_template("chase.html")
+
 # Run the application if this script is executed directly
 if __name__ == "__main__":
     # Start the Flask development server

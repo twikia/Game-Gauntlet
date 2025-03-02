@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where's Waldo?</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='waldo.css') }}">
+</head>
+<body>
+    <h1>Where's Waldo?</h1>
+    <p>click on him</p>
+    
+    <div id="game-container">
+        <img id="waldo-image" src="{{ url_for('static', filename='imgs/snow.jpg') }}" alt="Where's Waldo?">
+    </div>
+
+    <div id="message-box"></div>
+
+
+
+    <script src="{{ url_for('static', filename='waldo.js') }}"></script>
+</body>
+</html>
