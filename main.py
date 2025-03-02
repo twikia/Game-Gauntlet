@@ -11,6 +11,13 @@ def home():
     """
     return render_template("home.html")
 
+@app.route("/logicBoard")
+def logicBoard():
+    """
+    This is the logic board.
+    """
+    return render_template("logicBoard.html")
+
 
 
 # Run the application if this script is executed directly
