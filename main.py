@@ -1,7 +1,11 @@
 from flask import Flask, render_template
+import random
 
 # Create a Flask application instance
 app = Flask(__name__)
+
+refs = ["jump_atem.html","pop_lock.html","bottle_flip.html","logicBoard.html","mathgameL1.html","waldo.html","chase.html","cs.html"]
+index = random.randint(0, len(refs)-1)
 
 # Define a route for the root URL ("/")
 @app.route("/")
@@ -9,6 +13,8 @@ def home():
     """
     This is the home page.
     """
+
+    first_game = refs[index]
     return render_template("home.html")
 
 @app.route("/j")
@@ -25,7 +31,7 @@ def bottle_flip():
 
 @app.route("/after_game")
 def back_home():
-    return render_template("home.html")
+    return render_template("between.html")
 
 @app.route("/logicBoard")
 def logicBoard():
@@ -64,7 +70,14 @@ def chase():
 
 @app.route("/between")
 def between():
-    return render_template("between.html")
+    global index, refs
+    if (len(refs) > 0):  # Check if there are games left
+        next_game = refs[index]
+        refs.pop(index)  # Remove first game
+        index = random.randint(0, len(refs))
+        return render_template(next_game)
+    else:
+        return render_template("endpage.html")
 
 
 # Run the application if this script is executed directly
@@ -74,3 +87,4 @@ if __name__ == "__main__":
     #   - host='0.0.0.0' makes the app accessible from any IP address on your network (not just localhost)
     #   - port=5000 specifies the port number (default is 5000)
     app.run(debug=True, host='0.0.0.0', port=5001)
+
