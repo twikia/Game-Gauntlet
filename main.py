@@ -76,7 +76,7 @@ def between():
         refs.pop(index)  # Remove first game
         index = random.randint(0, len(refs) - 1)
         return render_template(next_game)
-    else if (len(refs) == 1):  # Check if there are games left
+    elif (len(refs) == 1):  # Check if there are games left
         next_game = refs[index]
         refs.pop(index)  # Remove first game
         return render_template(next_game)
