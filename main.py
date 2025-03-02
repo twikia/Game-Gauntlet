@@ -62,11 +62,17 @@ def waldo():
 def chase():
     return render_template("chase.html")
 
-@app.route("/between")
-def between():
-    return render_template("between.html")
+@app.route("/csgame")
+def csgame():
+    return render_template("cs.html")
 
+@app.route("/cs2")
+def cs2():
+    return render_template("cs2.html")
 
+@app.route("/cs3")
+def cs3():
+    return render_template("cs3.html")
 # Run the application if this script is executed directly
 if __name__ == "__main__":
     # Start the Flask development server
