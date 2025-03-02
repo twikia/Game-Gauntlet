@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room Minigames</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 40px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 42px;
+            text-transform: uppercase;
+            color: #8692ff;
+            margin-bottom: 20px;
+        }
+        .intro {
+            font-size: 20px;
+            max-width: 800px;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+        .start-button {
+            background-color: #8692ff;
+            color: white;
+            font-size: 20px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+        .start-button:hover {
+            background-color: #6b78e5;
+        }
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            max-width: 100%;
+            padding: 0 10%;
+            margin-top: 40px;
+        }
+        .team-member {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 3px solid #8692ff;
+        }
+        .job-title {
+            color: #8692ff;
+            font-weight: bold;
+        }
+        .project-description {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Game Gauntlet!</h1>
+        <p class="intro">
+            Test your skills and challenge your mind in this interactive escape room experience! 
+            Complete a series of minigames, solve puzzles, and navigate through exciting challenges 
+            to unlock the final escape. Are you ready?
+        </p>
+        <button class="start-button" onclick="startGame()">Start Playing</button>
+        <br><br>
+
+        <h2>Meet the Developers</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="/static/imgs/kelly.jpeg" alt="Developer 1">
+                <h3>Kelly McVeigh</h3>
+                <p class="job-title">Full-Stack Developer & Game Design</p>
+                <p>Worked on: Logic Board</p>
+            </div>
+            <div class="team-member">
+                <img src="/static/imgs/sab.jpg" alt="Developer 2">
+                <h3>Sabrina Vu</h3>
+                <p class="job-title">Full-Stack Developer & Game Design</p>
+                <p>Worked on: Math Game, CS Game</p>
+            </div>
+            <div class="team-member">
+                <img src="/static/imgs/sophie.jpg" alt="Developer 3">
+                <h3>Sophie Crawshaw</h3>
+                <p class="job-title">Full-Stack Developer & Game Design</p>
+                <p>Worked on: Escape the Monster, Where's Waldo?</p>
+            </div>
+            <div class="team-member">
+                <img src="/static/imgs/tai.jpg" alt="Developer 4">
+                <h3>Tai Polanowski</h3>
+                <p class="job-title">Full-Stack Developer & Game Design</p>
+                <p>Worked on: Spacearoo, Lock IT, Bottles</p>
+            </div>
+        </div>
+
+        <div class="project-description">
+            <p>
+                Game Gauntlet is a web-based adventure where players navigate through 
+                a series of interactive puzzles and challenges, inspired by real escape rooms. 
+                Built with HTML, CSS, and JavaScript for the frontend and Flask (Python) and Express.js (Node.js), 
+                it seamlessly blends game design, logic, and interactive storytelling into a fun, engaging challenge.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function startGame() {
+            window.location.href = "/game-start"; // Replace with actual game start URL
+        }
+    </script>
+</body>
+</html>

@@ -66,6 +66,11 @@ def chase():
 def between():
     return render_template("between.html")
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+
 
 # Run the application if this script is executed directly
 if __name__ == "__main__":
