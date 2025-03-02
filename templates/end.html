@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 40px;
+            overflow: hidden;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 42px;
+            text-transform: uppercase;
+            color: #8692ff;
+            margin-bottom: 20px;
+        }
+        .message {
+            font-size: 20px;
+            max-width: 600px;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+        .button {
+            background-color: #8692ff;
+            color: white;
+            font-size: 20px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 10px;
+        }
+        .button:hover {
+            background-color: #6b78e5;
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #8692ff;
+            opacity: 0.7;
+            border-radius: 50%;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh) translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) translateX(30px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Congratulations!</h1>
+        <p class="message">
+            You've completed Game Gauntlet! Challenge your friends and share your victory!
+        </p>
+        <button class="button" onclick="shareGame()">Share with Friends</button>
+        <button class="button" onclick="window.location.href='/'">Play Again</button>
+
+    </div>
+
+    <script>
+        function createConfetti() {
+            for (let i = 0; i < 100; i++) {
+                let confetti = document.createElement("div");
+                confetti.className = "confetti";
+                document.body.appendChild(confetti);
+                
+                confetti.style.left = Math.random() * window.innerWidth + "px";
+                confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
+                confetti.style.backgroundColor = ["#8692ff", "#6b78e5", "#ffffff", "#ffcc00"][Math.floor(Math.random() * 4)];
+                confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+            }
+        }
+        createConfetti();
+
+        function shareGame() {
+            const shareText = "I just completed Game Gauntlet! Can you beat my time? Play now: " + window.location.href;
+            navigator.clipboard.writeText(shareText).then(() => {
+                alert("Game link copied! Share it with your friends.");
+            });
+        }
+    </script>
+</body>
+</html>
