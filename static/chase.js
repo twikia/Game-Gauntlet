@@ -126,9 +126,7 @@ document.addEventListener("keydown", (e) => {
 
     if (you.x === finishLine.x && you.y === finishLine.y) {
         alert("WINNER");
-        setTimeout(() => {
-            window.location.href = "/after_game";  // Redirect - ADD ROUTE TO NEXT GAME
-        }, 2000);
+        window.location.href = "/after_game";  // Redirect - ADD ROUTE TO NEXT GAME
         return;
     }
 
